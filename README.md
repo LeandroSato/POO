@@ -187,3 +187,48 @@ elefante1.acao()
 - Como sobrescrever métodos nas subclasses
 - Como usar polimorfismo para tratar objetos de forma genérica
 - Como organizar código reaproveitando a classe base
+
+# Aula 5
+
+## Herança com `super()` e Especialização
+
+Nesta aula, exploramos herança mais profunda usando `super()` e criamos múltiplas subclasses especializadas a partir de uma classe base.
+
+### Conceitos abordados
+
+- **Herança**: classes `Funcionario` e `Cliente` herdam da classe base `Pessoa`.
+- **super()**: usado para chamar o construtor da classe pai e reutilizar seu código.
+- **Especialização**: cada subclasse adiciona seus próprios atributos e métodos.
+- **Polimorfismo**: métodos específicos de cada subclasse (`trabalhar`, `comprar`).
+- **Encapsulamento de dados**: uso de atributos como `saldo` para controlar estado.
+
+### Classes
+
+- `Pessoa`: classe base com `nome`, `idade` e método `apresentar()`.
+- `Funcionario`: subclasse que adiciona `cargo` e método `trabalhar()`.
+- `Cliente`: subclasse que adiciona `saldo` e método `comprar()` com validação.
+
+### Exemplo de uso
+
+No arquivo `Aula5/main.py`, são criados funcionários e clientes, demonstrando como cada um utiliza métodos específicos:
+
+```python
+f1 = Funcionario("Maria", 38, "Gerente de contas")
+f1.apresentar()
+f1.trabalhar()
+
+c1 = Cliente("Arthur", 16, 200)
+c1.apresentar()
+c1.comprar(300)
+
+c2 = Cliente("José", 31, 50)
+c2.apresentar()
+c2.comprar(30)
+```
+
+### Aprendizado
+
+- Como usar `super()` para reutilizar código da classe pai
+- Como criar subclasses especializadas com atributos e métodos próprios
+- Como validar operações (ex: verificar saldo antes de comprar)
+- Como organizar hierarquias de classes para diferentes tipos de objetos
