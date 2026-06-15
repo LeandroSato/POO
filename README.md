@@ -138,3 +138,52 @@ colaborador2.atualizar_idade(27)
 - Como aplicar validação dentro de métodos
 - Como representar mudanças de estado em objetos
 - Como usar métodos para exibir e modificar dados do objeto
+
+# Aula 4
+
+## Herança em POO
+
+Nesta aula, exploramos herança e polimorfismo usando uma hierarquia de animais.
+
+### Conceitos abordados
+
+- **Herança**: como subclasses (`Gato`, `Cachorro`, `Elefante`) herdam atributos e métodos de uma classe base (`Animal`).
+- **Polimorfismo**: métodos com o mesmo nome (`som`, `acao`) possuem implementações diferentes nas subclasses.
+- **Reuso de código**: a classe base `Animal` contém atributos e métodos comuns reutilizados pelas subclasses.
+- **Especialização**: cada subclasse implementa comportamentos específicos (por exemplo, `Miau`, `Au Au`).
+
+### Classe `Animal` e subclasses
+
+- `Animal(nome, cor, especie)`: classe base com método `apresentar()`.
+- `Gato`, `Cachorro`, `Elefante`: subclasses que implementam `som()` e `acao()`.
+
+### Exemplo de uso
+
+No arquivo `Aula4/main.py`, são instanciados um `Gato`, dois `Cachorro` e um `Elefante`, e demonstrados seus métodos:
+
+```python
+gato1 = Gato("Felix", "Branco", "Siamês")
+gato1.apresentar()
+gato1.som()
+gato1.acao()
+
+cachorro1 = Cachorro("Russo", "Preto", "Pastor Alemão")
+cachorro1.apresentar()
+cachorro1.som()
+cachorro1.acao()
+
+cachorro2 = Cachorro("Bella", "Branca", "Maltez")
+cachorro2.apresentar()
+
+elefante1 = Elefante("Fred", "Marrom", "Asiático")
+elefante1.apresentar()
+elefante1.som()
+elefante1.acao()
+```
+
+### Aprendizado
+
+- Como criar uma hierarquia de classes com herança
+- Como sobrescrever métodos nas subclasses
+- Como usar polimorfismo para tratar objetos de forma genérica
+- Como organizar código reaproveitando a classe base
