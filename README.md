@@ -52,3 +52,45 @@ casa2.adicionar_quarto()
 - Como usar o construtor para inicializar atributos
 - Como criar métodos para manipular e exibir dados dos objetos
 - Como instanciar objetos e invocar métodos
+
+# Aula 2
+
+## Programação Orientada a Objetos (POO)
+
+Nesta aula, a implementação aborda um objeto `carro` e o controle do seu estado.
+
+### Conceitos abordados
+
+- **Classe**: modelo para representar um carro.
+- **Atributos**: `cor`, `ano`, `ligado` e `seta`.
+- **Métodos**: ações como ligar, desligar e ativar a seta.
+- **Estado do objeto**: o carro só pode ligar a seta quando estiver ligado.
+
+### Classe `carro`
+
+A classe `carro` possui:
+
+- `__init__(self, cor, ano)`: inicializa cor, ano, ligado e seta.
+- `informacoes(self)`: exibe cor e ano do carro.
+- `ligar(self)`: liga o carro quando estiver desligado.
+- `desligar(self)`: desliga o carro quando estiver ligado.
+- `ligar_seta(self, direcao)`: ativa a seta apenas com o carro ligado.
+
+### Exemplo de uso
+
+No arquivo `Aula2/main.py`, o carro é criado e são chamados métodos para exibir informações, desligar o carro e ligar a seta.
+
+Exemplo de execução:
+
+```python
+carro1 = carro("Preto", 2021)
+carro1.informacoes()
+carro1.desligar()
+carro1.ligar_seta("direita")
+```
+
+### Aprendizado
+
+- Como trabalhar com estados booleanos em objetos
+- Como validar condições antes de executar ações
+- Como interagir com métodos que mudam o estado do objeto
