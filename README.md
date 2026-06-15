@@ -94,3 +94,47 @@ carro1.ligar_seta("direita")
 - Como trabalhar com estados booleanos em objetos
 - Como validar condições antes de executar ações
 - Como interagir com métodos que mudam o estado do objeto
+
+# Aula 3
+
+## Programação Orientada a Objetos (POO)
+
+Nesta aula, aprendemos a modelar uma pessoa com atributos e ações relacionadas a promoção e atualização de idade.
+
+### Conceitos abordados
+
+- **Classe**: representa uma pessoa com nome, idade e cargo.
+- **Atributos**: `nome`, `idade` e `cargo`.
+- **Métodos**: ações para exibir informações, promover e atualizar idade.
+- **Validação**: a idade só é atualizada se for maior que a idade atual.
+
+### Classe `Pessoa`
+
+A classe `Pessoa` possui:
+
+- `__init__(self, nome, idade, cargo)`: inicializa os atributos da pessoa.
+- `informacoes(self)`: exibe nome, idade e cargo.
+- `promover(self, novo_cargo)`: mostra uma mensagem de promoção.
+- `atualizar_idade(self, nova_idade)`: atualiza a idade somente se `nova_idade` for maior que a idade atual.
+
+### Exemplo de uso
+
+No arquivo `Aula3/main.py`, são criadas duas pessoas e chamados métodos para exibir informações, promover uma pessoa e atualizar a sua idade.
+
+Exemplo de execução:
+
+```python
+colaborador1 = Pessoa("Leandro", 19, "Assistente Junior")
+colaborador2 = Pessoa("Anna", 26, "Dev Junior")
+
+colaborador2.informacoes()
+colaborador2.promover("Assistente Pleno")
+colaborador2.atualizar_idade(27)
+```
+
+### Aprendizado
+
+- Como criar uma classe com atributos e métodos em Python
+- Como aplicar validação dentro de métodos
+- Como representar mudanças de estado em objetos
+- Como usar métodos para exibir e modificar dados do objeto

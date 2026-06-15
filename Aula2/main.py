@@ -1,4 +1,4 @@
-class carro:
+class Carro:
     def __init__(self, cor, ano):
         self.cor = cor
         self.ano = ano
@@ -31,7 +31,7 @@ class carro:
         self.seta = direcao
         print(f"Seta ligada para a {self.seta} ")
 
-carro1 = carro("Preto", 2021)
+carro1 = Carro("Preto", 2021)
 carro1.informacoes()
 carro1.desligar()
 carro1.ligar_seta("direita")
