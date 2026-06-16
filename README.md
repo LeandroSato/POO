@@ -198,6 +198,47 @@ Nesta aula, exploramos herança mais profunda usando `super()` e criamos múltip
 
 - **Herança**: classes `Funcionario` e `Cliente` herdam da classe base `Pessoa`.
 - **super()**: usado para chamar o construtor da classe pai e reutilizar seu código.
+
+# Aula 6
+
+## Herança múltipla e herança de multinível
+
+Nesta aula, aprendemos a combinar herança de multinível e herança múltipla usando uma hierarquia de animais.
+
+### Conceitos abordados
+
+- **Herança de multinível**: `Coelho` herda de `Presa`, que herda de `Animal`.
+- **Herança múltipla**: `Golfinho` herda de `Predador` e `Presa`.
+- **Métodos herdados**: `cacando()` e `fugindo()` são reutilizados pelas subclasses.
+- **Ordem de herança**: como a classe filha escolhe métodos quando herda de mais de um pai.
+
+### Classes
+
+- `Animal(nome)`: classe base com atributo `nome`.
+- `Predador(Animal)`: adiciona o método `cacando()`.
+- `Presa(Animal)`: adiciona o método `fugindo()`.
+- `Coelho(Presa)`, `Tigre(Predador)`, `Golfinho(Predador, Presa)`.
+
+### Exemplo de uso
+
+No arquivo `Aula6/main.py`, são criadas instâncias e chamados métodos herdados:
+
+```python
+coelho1 = Coelho("Bunny")
+tigre1 = Tigre("Leo")
+golfinho1 = Golfinho("Billy")
+
+coelho1.fugindo()
+tigre1.cacando()
+golfinho1.cacando()
+```
+
+### Aprendizado
+
+- como combinar herança múltipla e herança de multinível
+- como reutilizar métodos de classes pai
+- como classes podem herdar comportamentos de mais de um ancestral
+
 - **Especialização**: cada subclasse adiciona seus próprios atributos e métodos.
 - **Polimorfismo**: métodos específicos de cada subclasse (`trabalhar`, `comprar`).
 - **Encapsulamento de dados**: uso de atributos como `saldo` para controlar estado.
@@ -232,3 +273,4 @@ c2.comprar(30)
 - Como criar subclasses especializadas com atributos e métodos próprios
 - Como validar operações (ex: verificar saldo antes de comprar)
 - Como organizar hierarquias de classes para diferentes tipos de objetos
+
