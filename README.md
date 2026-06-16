@@ -274,3 +274,48 @@ c2.comprar(30)
 - Como validar operações (ex: verificar saldo antes de comprar)
 - Como organizar hierarquias de classes para diferentes tipos de objetos
 
+# Aula 7
+
+## Sistema de Escola com Polimorfismo e `super()`
+
+Nesta aula, desenvolvemos um sistema de escola que utiliza herança e polimorfismo para representar diferentes membros da comunidade escolar.
+
+### Conceitos abordados
+
+- **Classe base**: `Escola` contém atributos comuns (`nome`, `idade`, `status`) e métodos reutilizáveis.
+- **Polimorfismo**: cada subclasse (`Aluno`, `Professor`, `Assistente`) sobrescreve o método `apresentar()` com sua própria implementação.
+- **super()**: usado para chamar métodos da classe pai dentro das subclasses.
+- **Expressões ternárias**: uso de `if-else` compacto para exibir status (`"ATIVO"` ou `"INATIVO"`).
+
+### Classes
+
+- `Escola(nome, idade, status)`: classe base com método `apresentar()` e `verificar_status()`.
+- `Aluno(nome, idade, status, ano)`: adiciona atributo `ano` da escola.
+- `Professor(nome, idade, status, materia)`: adiciona atributo `materia`.
+- `Assistente(nome, idade, status, bloco)`: adiciona atributo `bloco`.
+
+### Exemplo de uso
+
+No arquivo `Aula7/main.py`, são criadas instâncias de cada tipo e chamados métodos polimórficos:
+
+```python
+a1 = Aluno(nome="Marcos", idade=12, status=True, ano=8)
+a1.apresentar()
+a1.verificar_status()
+
+p1 = Professor(nome="João", idade=37, status=True, materia="Matemática")
+p1.apresentar()
+p1.verificar_status()
+
+ass1 = Assistente(nome="Maria", idade=25, status=False, bloco="Bloco C")
+ass1.apresentar()
+ass1.verificar_status()
+```
+
+### Aprendizado
+
+- Como criar uma classe base e reutilizá-la através de herança
+- Como cada subclasse pode personalizar métodos herdados
+- Como usar `super()` para chamar métodos da classe pai
+- Como representar diferentes papéis (Aluno, Professor, Assistente) em um sistema unificado
+
