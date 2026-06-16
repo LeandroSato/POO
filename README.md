@@ -319,3 +319,40 @@ ass1.verificar_status()
 - Como usar `super()` para chamar métodos da classe pai
 - Como representar diferentes papéis (Aluno, Professor, Assistente) em um sistema unificado
 
+# Aula 8
+
+## Polimorfismo com personagens
+
+Nesta aula, trabalhamos polimorfismo com uma lista de personagens de um jogo, cada um com sua própria forma de falar.
+
+### Conceitos abordados
+
+- **Polimorfismo**: diferentes classes implementam o mesmo método `falar()` de formas distintas.
+- **Herança**: `Guerreiro`, `Mago` e `Arqueiro` herdam de `Personagens`.
+- **Coleções de objetos**: os personagens são agrupados em um conjunto para execução em sequência.
+
+### Classes
+
+- `Personagens`: classe base com o método `falar()` padrão.
+- `Guerreiro(Personagens)`: sobrescreve `falar()` com uma fala de guerreiro.
+- `Mago(Personagens)`: sobrescreve `falar()` com uma fala de mago.
+- `Arqueiro(Personagens)`: sobrescreve `falar()` com uma fala de arqueiro.
+
+### Exemplo de uso
+
+No arquivo `Aula8/main.py`, são criadas instâncias dos personagens e o método `falar()` é chamado para cada um:
+
+```python
+personagens = {Guerreiro(), Mago(), Arqueiro()}
+
+for p in personagens:
+	p.falar()
+```
+
+### Aprendizado
+
+- Como aplicar polimorfismo na prática
+- Como sobrescrever métodos em subclasses
+- Como organizar objetos diferentes em uma mesma coleção
+- Como reaproveitar uma classe base para criar comportamentos especializados
+
