@@ -356,3 +356,44 @@ for p in personagens:
 - Como organizar objetos diferentes em uma mesma coleção
 - Como reaproveitar uma classe base para criar comportamentos especializados
 
+# Aula 9
+
+## Agregação com carros e motores
+
+Nesta aula, estudamos agregação usando um carro que pode receber vários motores.
+
+### Conceitos abordados
+
+- **Agregação**: o objeto `Carro` é formado por objetos `Motor` criados separadamente.
+- **Coleção de objetos**: o carro mantém uma lista de motores associados.
+- **Reuso de objetos**: o mesmo modelo de motor pode ser inserido em uma estrutura maior.
+
+### Classes
+
+- `Motor(marca, potencia)`: representa um motor com marca e potência.
+- `Carro()`: classe que mantém uma lista de motores e permite adicioná-los.
+
+### Exemplo de uso
+
+No arquivo `Aula9/main.py`, são criados motores e adicionados a um carro:
+
+```python
+motor_v6 = Motor("Ford", 300)
+motor_v8 = Motor("Ferrari", 650)
+motor_v12 = Motor("Lamborghini", 950)
+
+carro = Carro()
+carro.adicionar_motor(motor_v6)
+carro.adicionar_motor(motor_v8)
+carro.adicionar_motor(motor_v12)
+
+carro.listar_motores()
+```
+
+### Aprendizado
+
+- Como representar agregação entre objetos em Python
+- Como armazenar objetos em listas dentro de outra classe
+- Como percorrer uma coleção para exibir informações
+- Como separar a criação dos componentes da classe principal
+
